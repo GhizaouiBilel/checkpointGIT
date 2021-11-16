@@ -1,0 +1,83 @@
+ASUS@DESKTOP-8MS3PQR MINGW64 ~/Desktop
+$ mkdir learn_git_again
+
+ASUS@DESKTOP-8MS3PQR MINGW64 ~/Desktop
+$ cd learn_git_again
+
+ASUS@DESKTOP-8MS3PQR MINGW64 ~/Desktop/learn_git_again
+$ touch third.txt
+
+ASUS@DESKTOP-8MS3PQR MINGW64 ~/Desktop/learn_git_again
+$  git init
+Initialized empty Git repository in C:/Users/ASUS/Desktop/learn_git_again/.git/
+
+ASUS@DESKTOP-8MS3PQR MINGW64 ~/Desktop/learn_git_again (master)
+$
+
+ASUS@DESKTOP-8MS3PQR MINGW64 ~/Desktop/learn_git_again (master)
+$ git add .
+ASUS@DESKTOP-8MS3PQR MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "adding third.txt"
+[master (root-commit) 0192a6b] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+ASUS@DESKTOP-8MS3PQR MINGW64 ~/Desktop/learn_git_again (master)
+$ git log
+commit 0192a6b13d75af39d5ac46b96c4c28839d5a693d (HEAD -> master)
+Author: GhizaouiBilel <bilelghizaoui68@gmail.com>
+Date:   Tue Nov 16 09:40:59 2021 +0100
+
+    adding third.txt
+
+ASUS@DESKTOP-8MS3PQR MINGW64 ~/Desktop/learn_git_again (master)
+$ touch fourth.txt
+
+ASUS@DESKTOP-8MS3PQR MINGW64 ~/Desktop/learn_git_again (master)
+$ git add fourth.txt
+
+ASUS@DESKTOP-8MS3PQR MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "adding fourth.txt"
+[master 2ba6e9a] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+
+ASUS@DESKTOP-8MS3PQR MINGW64 ~/Desktop/learn_git_again (master)
+$ git rm --cached third.txt
+rm 'third.txt'
+
+ASUS@DESKTOP-8MS3PQR MINGW64 ~/Desktop/learn_git_again (master)
+$ git add .
+
+ASUS@DESKTOP-8MS3PQR MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "removing third.txt"
+On branch master
+nothing to commit, working tree clean
+
+ASUS@DESKTOP-8MS3PQR MINGW64 ~/Desktop/learn_git_again (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ASUS@DESKTOP-8MS3PQR MINGW64 ~/Desktop/learn_git_again (master)
+$ git log
+commit 2ba6e9a4b8dd7526c257cce2263dacbf8e85277f (HEAD -> master)
+Author: GhizaouiBilel <bilelghizaoui68@gmail.com>
+Date:   Tue Nov 16 09:41:35 2021 +0100
+
+    adding fourth.txt
+
+commit 0192a6b13d75af39d5ac46b96c4c28839d5a693d
+Author: GhizaouiBilel <bilelghizaoui68@gmail.com>
+Date:   Tue Nov 16 09:40:59 2021 +0100
+
+    adding third.txt
+ASUS@DESKTOP-8MS3PQR MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --global core.pager 'cat'
+
+ASUS@DESKTOP-8MS3PQR MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --global --list
+user.email=bilelghizaoui68@gmail.com
+user.name=GhizaouiBilel
+core.pager=cat
+
